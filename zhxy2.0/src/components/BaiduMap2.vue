@@ -1,6 +1,15 @@
 <template>
     <div id="app">
         <div id="map_container"></div>
+        <div class="RightBox4">
+            <img src="../img/right3.png" class="img">
+            <div class="boxTitle">人流量分析</div>
+            <div class="boxmain">
+                <!--图表-->
+                <button @click="loadData1" style="width:90%;">时段1</button>
+                <button @click="loadData2" style="width:90%;">时段2</button>
+            </div>
+        </div>
     </div>
 </template>
   
@@ -11,6 +20,7 @@ export default {
     data() {
         return {
             map: null,
+            grid: null, // 添加这一行
         };
     },
     mounted() {
@@ -19,8 +29,10 @@ export default {
     methods: {
         initializeMap() {
             this.map = new BMapGL.Map("map_container");
-            this.map.centerAndZoom(new BMapGL.Point(113.543663, 34.823332), 17);
+            this.map.centerAndZoom(new BMapGL.Point(113.543000, 34.82100), 17);
             this.map.setHeading(30);
+            this.map.setTilt(45);
+
             this.map.setMapStyleV2({
                 styleId: '2cd2d0647854f1b38f743ca6f98ceacd'
             });
@@ -55,7 +67,7 @@ export default {
                 map: this.map,
             });
 
-            const grid = new mapvgl.HeatGridLayer({
+            this.grid = new mapvgl.HeatGridLayer({
                 max: 80,
                 min: 10,
                 gridSize: 50,
@@ -69,7 +81,7 @@ export default {
                 minHeight: 50
             });
 
-            view.addLayer(grid);
+            view.addLayer(this.grid);
 
             // 使用 Axios 加载 JSON 数据
             axios.get('/1.json')
@@ -84,7 +96,49 @@ export default {
                             count: item[2],
                         },
                     }));
-                    grid.setData(heatmapData);
+                    this.grid.setData(heatmapData); // 修改这一行
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        },
+        loadData1() {
+            // 使用 Axios 加载新的 JSON 数据（例如 '2.json'）
+            axios.get('/2.json')
+                .then(response => {
+                    const newData = response.data.result.data[0].bound;
+                    const heatmapData = newData.map(item => ({
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [item[0], item[1]],
+                        },
+                        properties: {
+                            count: item[2],
+                        },
+                    }));
+                    // 设置新的数据到 HeatGridLayer
+                    this.grid.setData(heatmapData); // 修改这一行
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        },
+        loadData2() {
+            // 使用 Axios 加载新的 JSON 数据（例如 '2.json'）
+            axios.get('/1.json')
+                .then(response => {
+                    const newData = response.data.result.data[0].bound;
+                    const heatmapData = newData.map(item => ({
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [item[0], item[1]],
+                        },
+                        properties: {
+                            count: item[2],
+                        },
+                    }));
+                    // 设置新的数据到 HeatGridLayer
+                    this.grid.setData(heatmapData); // 修改这一行
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
@@ -107,5 +161,14 @@ export default {
     height: 100%;
     margin: 0;
 }
+
+.RightBox4 {
+    position: absolute;
+    height: 80%;
+    width: 27%;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    pointer-events: auto;
+}
 </style>
-  

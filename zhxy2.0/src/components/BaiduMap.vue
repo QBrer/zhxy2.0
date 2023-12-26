@@ -99,7 +99,7 @@ export default {
       tushuguan.addEventListener('click', (event) => {
         this.buildingInfo = {
           name: '图书馆',
-          relatedInfo: '图书馆是郑州大学的标志性建筑之一，建筑面积3.8万平方米，是河南省最大的图书馆。',
+          relatedInfo: '图书馆是郑州大学的标志性建筑之一，建筑面积3.8万平方米。',
           image: '/tushuguan.png',
         };
       });

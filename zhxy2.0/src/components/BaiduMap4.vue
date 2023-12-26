@@ -59,8 +59,9 @@ export default {
   },
   mounted() {
     this.map = new BMapGL.Map('map4');
-    this.map.centerAndZoom(new BMapGL.Point(113.543663, 34.823332), 17);
+    this.map.centerAndZoom(new BMapGL.Point(113.543663, 34.821000), 18);
     this.map.enableScrollWheelZoom(true);
+    this.map.setTilt(45);
     this.navigation = new BMapGL.NavigationControl({
       enableGeolocation: true,
       enableAutoLocation: true,
