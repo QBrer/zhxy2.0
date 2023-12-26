@@ -1,0 +1,455 @@
+.boxRader {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.centerBox {
+    width: 75%;
+    margin-right: 15px;
+    background: transparent;
+}
+
+.boxFont {
+    font-size: 1.2vw;
+}
+
+.centerMainBox1 {
+    width: 100%;
+    height: 60.5%;
+}
+
+.centerMainBox2 {
+    width: 100%;
+    height: 38.5%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.centerMainBox2 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.boxTitle2 {
+    width: 100%;
+    height: 10%;
+    font-size: .6vw;
+    text-align: center;
+    line-height: 10%;
+    margin-top: 1vw;
+    color: #0efcff;
+}
+
+.boxLis {
+    width: 70%;
+    height: 1.5vw;
+    margin-left: 3vw;
+    margin-top: 1vw;
+    border-bottom: .02vw solid rgb(40, 229, 233);
+}
+
+.boxLis>li {
+    width: 4vw;
+    height: 1.4vw;
+    display: block;
+    background: rgba(40, 229, 233, .5);
+    margin-right: .5vw;
+    color: #fff;
+    line-height: 1.4vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: .02vw solid #040A18;
+    border-top: .02vw solid rgb(40, 229, 233);
+    border-right: .02vw solid rgb(40, 229, 233);
+    border-left: .02vw solid rgb(40, 229, 233);
+}
+
+.contList {
+    position: relative;
+    width: 70%;
+    height: 7vw;
+    margin: 1vw auto 0;
+
+}
+
+.content1 li {
+    display: none;
+}
+
+.baseBox {
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.boxTitle {
+    font-size: .8vw;
+    width: 38%;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+.baseBoxLeft {
+    width: 30%;
+    height: 95%;
+    position: relative;
+}
+
+.baseBoxRight {
+    width: 68%;
+    height: 75%;
+}
+
+.baseBoxLeft img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.maps {
+    width: 100%;
+    height: 95%;
+    margin-top: 2%;
+    background: pink;
+}
+
+.baseBox1,
+.baseBox2,
+.baseBox3 {
+    position: relative;
+}
+
+.baseBox1 img,
+.baseBox2 img,
+.baseBox3 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.csbaseBox1 {
+    position: relative;
+    z-index: 999;
+}
+.liSpan {
+    width: 100%;
+    margin-top: 3.2%;
+    text-align: center;
+    color: rgb(40, 229, 233);
+}
+
+.liP {
+    width: 66%;
+    margin: .3vw auto 0;
+    text-align: left;
+    font-size: .5vw;
+    color: rgb(40, 229, 233);
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.titleName {
+    color: #0EFCFF;
+}
+
+/* 种植 */
+.plant {
+    width: 90%;
+    height: 5.5vw;
+    margin: 2% auto 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+}
+
+.plant>li {
+    width: 15%;
+    height: 100%;
+}
+
+.jumps {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 235, 255, .08);
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
+    display: -moz-flex;
+    -moz-flex-direction: column;
+    -moz-justify-content: space-between;
+}
+
+.jumps>div>img {
+    width: .88vw;
+    height: .88vw;
+    float: right;
+}
+
+.jumps>p {
+    width: 90%;
+    font-size: 1.3vw;
+    color: #fff;
+    margin: auto;
+
+}
+
+.jumps>div {
+    width: 90%;
+    margin: 5% auto 0;
+}
+
+.jumps>div>span {
+    font-size: .6vw;
+    color: #0efcff;
+    float: left;
+}
+
+.spans0 {
+    width: 80%;
+    height: 5%;
+    background: #03DA8D;
+}
+
+.spans1 {
+    width: 80%;
+    height: 5%;
+    background: #0efcff;
+}
+
+.spans2 {
+    width: 80%;
+    height: 5%;
+    background: #FE0000;
+}
+
+.spans3 {
+    width: 80%;
+    height: 5%;
+    background: #F78001;
+}
+
+.boxVideo {
+    width: 100%;
+    height: 100%;
+}
+
+.boxVideo video {
+    width: 100%;
+    height: 100%;
+
+}
+
+.baseDatas {
+    width: 70%;
+    height: 2vw;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    margin: 1vw 0 0 5vw;
+
+}
+
+.baseDatas li {
+    width: 10%;
+}
+
+.baseDatas li a {
+    color: #fff;
+    font-size: .8vw;
+}
+
+.active2 a>span {
+    color: rgb(40, 229, 233);
+}
+
+.baseDatas li a:hover>span {
+    color: rgb(40, 229, 233);
+}
+
+.baseDatas li a:hover>.borderRight {
+    border-left-color: rgb(40, 229, 233);
+}
+
+.tableDetalis {
+    width: 92%;
+    color: #fff;
+    margin-left: 2vw;
+}
+
+.tableDetalis tr {
+    height: 1.3vw;
+    font-size: .8vw;
+}
+
+.tableDetalis tr>td {
+    text-align: center;
+}
+
+.tableDetalis tr>td:nth-child(7) {
+    text-align: right;
+}
+
+.borderRight {
+    width: 0;
+    height: 0;
+    float: left;
+    border: .4vw solid transparent;
+    border-left-color: #fff;
+    margin-top: .2vw;
+}
+
+.borderActive {
+    border-left-color: rgb(40, 229, 233);
+}
+
+.equipment_table {
+    width: 85%;
+    height: 25%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-size: .5vw;
+}
+
+.equipment_table tr:nth-child(1) {
+    color: #0EFCFF;
+}
+
+.equipment_table tr {
+    border: 1px solid#0EFCFF;
+}
+
+.equipment_table tr:nth-child(1) {
+    font-size: .8vw;
+}
+
+.equipment_table img {
+    width: 1vw;
+}
+
+.env_table {
+    height: 35%;
+    margin-top: 5%;
+}
+
+.env_table td {
+    border: 1px solid#0EFCFF;
+}
+
+.env_table tr:nth-child(1) {
+    background: rgba(14, 252, 255, .3);
+}
+
+.map img {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.map img {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.mapActived1 {
+    position: absolute;
+    top: 41.5%;
+    left: 61%;
+    width: 3.5vw;
+    height: 5.5vw;
+    border-radius: 90px;
+    cursor: pointer;
+}
+
+.mapActived2 {
+    position: absolute;
+    top: 60%;
+    right: 16%;
+    width: 4.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+}
+
+.mapActived3 {
+    position: absolute;
+    top: 57%;
+    right: 9%;
+    width: 2.5vw;
+    height: 7vw;
+    cursor: pointer;
+}
+
+.mapContent1 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 65%;
+    top: 33%;
+    background: rgba(255, 255, 255, .2);
+}
+
+.mapContent2 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 70%;
+    top: 35%;
+    background: rgba(255, 255, 255, .2);
+    display: none;
+}
+
+.mapContent3 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    right: 1%;
+    top: 35%;
+    background: rgba(255, 255, 255, .2);
+    display: none;
+}
+
+
+.mapContentFont {
+    width: 85%;
+    margin-left: 12%;
+    font-size: .6vw;
+    color: #0efcff;
+    letter-spacing: .05vw;
+    margin-bottom: .3vw;
+}
+
+.mapContentFont:nth-child(1) {
+    margin-top: .6vw;
+}
+
+.mapContentFont span {
+    color: white;
+}
+
+/* lafite video样式 */
+.video-js {
+    width: 100%;
+    height: 100%;
+}
+.video-js:hover .vjs-big-play-button {
+    background: none;
+}
+.video-js .vjs-big-play-button:hover {
+    background: none;
+}
+.video-js .vjs-big-play-button {
+    border: none;
+    background: none;
+}
