@@ -225,7 +225,7 @@ html,
     transform: skewX(-38deg);
 }
 
-.btn_list:hover::before {
+/* .btn_list:hover::before {
     border-color: #0efcff;
     box-shadow  : 1px 1px 3px 1px #0efcff inset;
 }
@@ -233,7 +233,7 @@ html,
 .listActive:before {
     border-color: #0efcff;
     box-shadow  : 1px 1px 3px 1px #0efcff inset;
-}
+} */
 
 .content {
     position     : relative;

@@ -138,7 +138,7 @@ export default {
       var navi3DCtrl = new BMapGL.NavigationControl3D({
         anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
         // 控件基于停靠位置的偏移量（可选）
-        offset: new BMapGL.Size(50, 10)
+        offset: new BMapGL.Size(50, 100)
       });  // 添加3D控件
       map.addControl(navi3DCtrl);
 
@@ -147,7 +147,7 @@ export default {
       var zoomCtrl = new BMapGL.ZoomControl({
         anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
         // 控件基于停靠位置的偏移量（可选）
-        offset: new BMapGL.Size(20, 10)
+        offset: new BMapGL.Size(20, 100)
       });  // 添加缩放控件
       map.addControl(zoomCtrl);
       // 创建定位控件
@@ -155,7 +155,7 @@ export default {
         // 控件的停靠位置（可选，默认左上角）
         anchor: BMAP_ANCHOR_BOTTOM_LEFT,
         // 控件基于停靠位置的偏移量（可选）
-        offset: new BMapGL.Size(10, 50)
+        offset: new BMapGL.Size(10, 100)
       });
       // 将控件添加到地图上
       map.addControl(locationControl);
@@ -193,7 +193,7 @@ export default {
 
 #r-result,
 #r-result table {
-  width: 100%;
+  width: 90%;
   height: 100%;
   overflow-y: auto;
   /* Add this property to enable vertical scrollbar if content exceeds the height */

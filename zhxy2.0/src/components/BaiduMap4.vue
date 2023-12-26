@@ -69,7 +69,12 @@ export default {
     this.map.setMapStyleV2({
       styleId: '2cd2d0647854f1b38f743ca6f98ceacd',
     });
-
+    // 添加3D导航控件
+    var navi3DCtrl = new BMapGL.NavigationControl3D({
+      anchor: BMAP_ANCHOR_TOP_LEFT,
+      offset: new BMapGL.Size(100, 10)
+    });
+    this.map.addControl(navi3DCtrl);
     for (const coordinate of this.coordinates) {
       const point = new BMapGL.Point(coordinate.lng, coordinate.lat);
       const marker = new BMapGL.Marker(point);
@@ -192,12 +197,12 @@ export default {
       }, steps * duration);
     },
     startNavigation(startPoint, endPoint) {
-    const driving = new BMapGL.DrivingRoute(this.map, {
-      renderOptions: { map: this.map, autoViewport: true },
-    });
+      const driving = new BMapGL.DrivingRoute(this.map, {
+        renderOptions: { map: this.map, autoViewport: true },
+      });
 
-    driving.search(startPoint, endPoint);
-  },
+      driving.search(startPoint, endPoint);
+    },
     checkFireHydrantsDistance(circle, centerPoint, radius) {
       const fireIcon = new BMapGL.Icon('/xiaofnagshuan.png', new BMapGL.Size(32, 32));
       const hydrantsWithinRadius = [];

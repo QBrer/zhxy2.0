@@ -23,13 +23,5 @@ export default {
 </script>
 
 <style>
-/* @import url('./css/circulationSales.css');
-@import url('./css/index.css');
-@import url('./css/land_flow.css');
-@import url('./css/new_index.css');
-@import url('./css/production.css');
-@import url('./css/production_testing.css'); */
 @import url('./css/reset.css');
-/* @import url('./css/css.css'); */
-/* @import url('./css/boxmap.css'); */
 </style>
