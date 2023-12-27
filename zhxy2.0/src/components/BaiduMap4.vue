@@ -23,6 +23,7 @@
 
 
 <script>
+/* global BMapGL,BMAP_ANCHOR_TOP_LEFT*/
 export default {
   data() {
     return {

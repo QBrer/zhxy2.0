@@ -38,6 +38,7 @@
 </template>
 
 <script>
+/* global BMapGL, BMAP_ANCHOR_BOTTOM_RIGHT, BMAP_ANCHOR_BOTTOM_LEFT */
 export default {
   data() {
     return {
@@ -66,7 +67,7 @@ export default {
         new BMapGL.Point(113.537062, 34.820063),
       ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0, fillOpacity: 0.1 });  //创建多边形
       map.addOverlay(heyi);
-      heyi.addEventListener('click', (event) => {
+      heyi.addEventListener('click', () => {
         this.buildingInfo = {
           name: '荷一餐厅',
           relatedInfo: '荷园一号餐厅',
@@ -81,7 +82,7 @@ export default {
         new BMapGL.Point(113.537184, 34.821174)
       ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0, fillOpacity: 0.1 });  //创建多边形
       map.addOverlay(heer);
-      heer.addEventListener('click', (event) => {
+      heer.addEventListener('click', () => {
         this.buildingInfo = {
           name: '荷二餐厅',
           relatedInfo: '荷园二号餐厅',
@@ -96,7 +97,7 @@ export default {
         new BMapGL.Point(113.545749, 34.822856)
       ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0, fillOpacity: 0.1 });  //创建多边形
       map.addOverlay(tushuguan);
-      tushuguan.addEventListener('click', (event) => {
+      tushuguan.addEventListener('click', () => {
         this.buildingInfo = {
           name: '图书馆',
           relatedInfo: '图书馆是郑州大学的标志性建筑之一，建筑面积3.8万平方米。',
@@ -111,7 +112,7 @@ export default {
         new BMapGL.Point(113.543871, 34.823412)
       ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0, fillOpacity: 0.1 });  //创建多边形
       map.addOverlay(zhonglou);
-      zhonglou.addEventListener('click', (event) => {
+      zhonglou.addEventListener('click', () => {
         this.buildingInfo = {
           name: '钟楼',
           relatedInfo: '钟楼有着郑大的“第一高度”，56米的钟楼象征56个民族，寓意来自五湖四海郑大人的团结和凝聚。',
@@ -126,7 +127,7 @@ export default {
         new BMapGL.Point(113.539945, 34.823478)
       ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0, fillOpacity: 0.1 });  //创建多边形
       map.addOverlay(benyuan);
-      benyuan.addEventListener('click', (event) => {
+      benyuan.addEventListener('click', () => {
         this.buildingInfo = {
           name: '本源体育场',
           relatedInfo: '郑州大学主校区中心体育场，是一个以教学为主，兼做训练比赛的综合性乙级体育建筑。',

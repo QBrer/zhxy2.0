@@ -14,6 +14,7 @@
 </template>
   
 <script>
+/* global BMapGL, BMAP_ANCHOR_BOTTOM_RIGHT, BMAP_ANCHOR_BOTTOM_LEFT, mapvgl */
 import axios from 'axios';
 
 export default {
@@ -82,12 +83,42 @@ export default {
             });
 
             view.addLayer(this.grid);
+            var heatmap = new mapvgl.HeatmapLayer({
+                size: 100, // 单个点绘制大小
+                max: 40, // 最大阈值
+                height: 0, // 最大高度，默认为0
+                unit: 'm', // 单位，m:米，px: 像素
+                gradient: { // 对应比例渐变色
+                    0.25: 'rgba(0, 0, 255, 1)',
+                    0.55: 'rgba(0, 255, 0, 1)',
+                    0.85: 'rgba(255, 255, 0, 1)',
+                    1: 'rgba(255, 0, 0, 1)'
+                }
+            });
+            view.addLayer(heatmap);
 
             // 使用 Axios 加载 JSON 数据
-            axios.get('/1.json')
+            // axios.get('/1.json')
+            //     .then(response => {
+            //         const rs = response.data.result.data[0].bound;
+            //         const heatmapData = rs.map(item => ({
+            //             geometry: {
+            //                 type: 'Point',
+            //                 coordinates: [item[0], item[1]],
+            //             },
+            //             properties: {
+            //                 count: item[2],
+            //             },
+            //         }));
+            //         this.grid.setData(heatmapData); 
+            //     })
+            //     .catch(error => {
+            //         console.error('Error fetching data:', error);
+            //     });
+            axios.get('/1ping.json')
                 .then(response => {
-                    const rs = response.data.result.data[0].bound;
-                    const heatmapData = rs.map(item => ({
+                    const newData = response.data.result.data[0].bound;
+                    const heatmapData = newData.map(item => ({
                         geometry: {
                             type: 'Point',
                             coordinates: [item[0], item[1]],
@@ -96,7 +127,8 @@ export default {
                             count: item[2],
                         },
                     }));
-                    this.grid.setData(heatmapData); // 修改这一行
+                    // 将实际的热力图数据设置到 HeatmapLayer
+                    heatmap.setData(heatmapData);
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
